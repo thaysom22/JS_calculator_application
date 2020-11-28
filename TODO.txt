@@ -1,0 +1,1 @@
+* Use JS to add/remove active class on operator buttons

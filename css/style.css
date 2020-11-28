@@ -1,0 +1,96 @@
+/* Import Helvetica font from google fonts API */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25rem;
+    
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.calculator-container{
+    height: 100vh;
+}
+
+.calculator{
+    width: 320px;
+    height: 568px;
+    margin: 10px auto;
+    background-color: rgb(0,0,0);
+}
+
+.output{
+    height: 25%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
+}
+
+.output span{
+    color: white;
+    font-size: 4rem;
+    font-weight: 300;
+    padding: 0 18px;
+    line-height: 4rem;
+    max-width: 100%;
+}
+
+.buttons-container{
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(5, 20%);
+    grid-template-columns: repeat(4, 25%);
+    justify-items: center;
+    align-items: center;
+    height: 75%;
+}
+
+.button,
+.button:focus{
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.5rem;
+    height: 70px;
+    outline: none;
+}
+
+.button:not(.span-2){
+    border-radius: 50%;
+    width: 70px;
+}
+
+.button.number{
+    background-color: rgba(238,238,238,.12);
+    color: white;
+}
+
+.button.number:active{
+    background-color: rgba(238,238,238,.5);
+}
+
+.button.function{
+    background-color: rgb(198 216 220 / 55%);
+    color: black;
+}
+
+.button.function:active{
+    background-color: rgb(198 216 220 / 90%);
+}
+
+.button.operator{
+    background-color: #fca800;
+    color: white;
+}
+
+.span-2{
+    grid-column-start: span 2;
+    border-radius: 50% / 80%;
+    width: 150px;
+}
