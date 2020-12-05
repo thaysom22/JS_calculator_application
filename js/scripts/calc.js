@@ -3,14 +3,25 @@ class Calculator {
         this.currentOperand = 0;
         this.previousOperand = 0;
         this.activeOperation = false;
-        // Test
-        console.log("calculator instance created");
+        this.decimalCheck = false;
+        this.outputString = "0"
+        output.textContent = this.outputString;
     }
 
     append(number) {
-        let outputString = this.currentOperand ? this.currentOperand + number : number; // avoid leading zero. concat of number type and string type returns string type
-        this.currentOperand = parseFloat(outputString);
-        output.textContent = outputString;
+        if (number === ".") {
+            if (this.decimalCheck) { return; };
+            this.decimalCheck = true;
+            this.outputString = this.currentOperand + number; // concat of number type and string type returns string type
+        } else if (this.decimalCheck) {
+            this.outputString += number; 
+            } else {
+            this.outputString = this.currentOperand ? this.outputString + number : number; // avoid leading zero for integer outputs
+            };
+       
+        this.currentOperand = parseFloat(this.outputString);
+        output.textContent = this.outputString;
+        console.log(this.currentOperand); // test
     }
 
     operation() {
