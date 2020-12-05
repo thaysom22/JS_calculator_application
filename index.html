@@ -6,9 +6,11 @@
     <title>Calculator</title>
 
 
-    <!-- Load local scripts and css -->
-    <script src="js/scripts/calc.js"></script>
+    <!-- Load local css -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Load local script after page content has been parsed by browser -->
+    <script src="js/scripts/calc.js" defer></script>
 
     <!-- Load Jasmine scripts and css from cdnjs.com -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.js" integrity="sha512-dqL4nYnbiMiNNy/V2zRK55QXSRVyu26KCuGoL8Zf5lDfKRRf8pBFW8RXe8at36QlB8s8bnOjKP6b5YTalHO6wQ==" crossorigin="anonymous"></script>
@@ -16,35 +18,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/boot.js" integrity="sha512-igPP1Xd0hsvXVZGyfIYeUD779NLEA1Sj/5ts2C/e/22zeUqR6ehA7M/nNLuONalznkHQkGPBESNwzGpwBQD60g==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.css" integrity="sha512-XKXP02aeSNI5HsDB3+4MM0tSDXJTBFZpt99xL7PvMz3+A3aRy0F0Ne/CATK+Z72ckE/4Ev9OiosWQr5LtU284Q==" crossorigin="anonymous" />
 
-    <!-- Load local script after page content has been parsed by broswer -->
-    <script src="scripts/calc.js" defer></script>
+    <!-- Load local test suite -->
+    <script src="js/specs/calcSpec.js"></script>
 </head>
 <body>
     <div class="calculator-container">
         <div class="calculator">
             <div class="output">
-                <span>0.156</span>
+                <span data-output></span>
             </div>
             <div class="buttons-container">
-                <button class="button function" data="all-clear">AC</button>
-                <button class="button function" data="plus-minus">+/-</button>
-                <button class="button function" data="percentage">%</button>
-                <button class="button operator" data="divide">&#247;</button>
-                <button class="button number" data="number">7</button>
-                <button class="button number" data="number">8</button>
-                <button class="button number" data="number">9</button>
-                <button class="button operator" data="multiply">x</button>
-                <button class="button number" data="number">4</button>
-                <button class="button number" data="number">5</button>
-                <button class="button number" data="number">6</button>
-                <button class="button operator" data="minus">-</button>
-                <button class="button number" data="number">1</button>
-                <button class="button number" data="number">2</button>
-                <button class="button number" data="number">3</button>
-                <button class="button operator" data="add">+</button>
-                <button class="button number span-2" data="number">0</button>
-                <button class="button number" data="number">.</button>
-                <button class="button operator" data="calculate">=</button>
+                <button class="button function" data-function data-all-clear>AC</button>
+                <button class="button function" data-function data-plus-minus>+/-</button>
+                <button class="button function" data-function data-percentage>%</button>
+                <button class="button operator" data-operator data-divide>&#247;</button>
+                <button class="button number" data-number>7</button>
+                <button class="button number" data-number>8</button>
+                <button class="button number" data-number>9</button>
+                <button class="button operator" data-operator data-multiply>x</button>
+                <button class="button number" data-number>4</button>
+                <button class="button number" data-number>5</button>
+                <button class="button number" data-number>6</button>
+                <button class="button operator" data-operator data-minus>-</button>
+                <button class="button number" data-number>1</button>
+                <button class="button number" data-number>2</button>
+                <button class="button number" data-number>3</button>
+                <button class="button operator" data-operator data-add>+</button>
+                <button class="button number span-2" data-number>0</button>
+                <button class="button number" data-number>.</button>
+                <button class="button operator" data-operator data-calculate>=</button>
             </div>
         </div>
     </div>    
