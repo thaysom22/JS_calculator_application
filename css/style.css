@@ -4,7 +4,7 @@
 *, *::before, *::after{
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.25rem;
+    font-size: 0.625rem;
     
 }
 
@@ -34,10 +34,10 @@ body{
 
 .output span{
     color: white;
-    font-size: 4rem;
+    font-size: 9rem;
     font-weight: 300;
-    padding: 0 18px;
-    line-height: 4rem;
+    padding: 0 1.5rem;
+    line-height: 9rem;
     max-width: 100%;
 }
 
@@ -56,7 +56,7 @@ body{
     border: none;
     cursor: pointer;
     padding: 0;
-    font-size: 1.5rem;
+    font-size: 3rem;
     height: 70px;
     outline: none;
 }
